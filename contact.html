@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image" href="resources/images/logo_website_file_global_icon_removebg.png">
+<!-- <meta http-equiv="refresh" content="450"> -->
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<meta http-equiv="content-language" content="en">
+<meta charset="UTF-8">
+<title>Contact</title>
+<style type="text/css">
+* {
+text-align: center;
+}
+body {
+background-color: rgb(245, 247.5, 255) !important;
+}
+.main {
+background-color: lightgray;
+ margin: auto;
+ width: 40%;
+ border: 2px solid gray;
+ padding-bottom: 15px;
+ margin-top: 5px;
+ border-radius: 0px 0px 10px 10px;
+ /*box-shadow: 3px 4px 4px gray;*/
+}
+.heading1 {
+margin-top: 20px;
+font-family: arial;
+font-weight: 100;
+letter-spacing: 1.5px;
+margin-bottom: 0;
+text-transform: uppercase;
+font-size: 29px;
+}
+nav {
+user-select: none;
+}
+nav ul {
+display: inline-block;
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+nav li {
+font-family: calibri;
+float: left;
+margin: 20px;
+}
+nav li a {
+background-color: ghostwhite;
+text-decoration: none;
+border: 1px solid gray;
+transition: 0.3s;
+padding: 5px;
+}
+nav ul a:hover {
+color: blue;
+text-decoration: underline;
+}
+.link-contact {
+color: #7CB9E8;
+}
+.link-contact:hover {
+color: lightblue !important;
+}
+.buttonSubmit {
+ cursor: pointer;
+ user-select: none;
+ margin-top: 7px;
+ border: 2px solid black;
+ background-color: #696969;
+ color: white;
+ border-radius: 3px;
+ transition: 0.1s;
+}
+.buttonSubmit:hover {
+scale: 1.1;
+font-weight: 100;
+color: smokewhite;
+}
+#text-input {
+text-align: start;
+resize: none;
+font-family: sans-serif;
+}
+label {
+font-family: arial;
+}
+</style>
+</head>
+<body style="background-color: white;">
+
+<main class="main">
+
+<header>
+<h1 class="heading1">contact us</h1>
+
+<nav>
+<ul>
+<li><a href="home.page.html" class="link-home">Home</a></li>
+<li><a href="about.html" class="link-about">About</a></li>
+<li><a href="#" class="link-contact">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<form action="send-form.php" method="POST">
+  <label for="email-input">email address:</label>
+<br>
+ <input type="email" id="email-input" name="email-input" value="@gmail.com" required maxlength="30" autofocus>
+<br> <br> <!-- name="email-address" -->
+  <label for="text-input">write a message here</label>
+<br>
+ <textarea id="text-input" name="text-input" rows="4" cols="20" maxlength="100" required></textarea>
+<br> <!-- name="message-input" -->
+<button type="submit" class="buttonSubmit">submit</button> <!-- value="submit" -->
+</form>
+
+</main>
+
+<script type="text/javascript" defer="true">
+
+let bth_click = false;
+
+let bth = document.querySelector(".buttonSubmit");
+let LinkContact = document.querySelector(".link-contact");
+
+bth.onclick = function() {
+bth_click = true;
+}
+
+window.addEventListener('beforeunload', function (e) {
+if(bth_click == false) {
+    e.preventDefault();
+    e.returnValue = '';
+}
+});
+
+LinkContact.onclick = () => alert("You already on the contact page!");
+</script>
+
+</body>
+</html>

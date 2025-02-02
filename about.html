@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image" href="resources/images/logo_website_file_global_icon_removebg.png">
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<meta http-equiv="content-language" content="en">
+<meta http-equiv="refresh" content="450">
+<meta charset="UTF-8">
+<title>About</title>
+<style type="text/css">
+body {
+background-color: rgb(245, 247.5, 255) !important;
+}
+.heading1 {
+font-family: verdana;
+font-weight: 100;
+letter-spacing: -1px;
+}
+.para1 {
+font-family: arial;
+font-size: 14.5px; /* 14.5px - 15px */
+text-transform: capitalize;
+letter-spacing: 0.10px;
+}
+.para1::first-letter {
+font-size: 16px;
+}
+ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+li a {
+display: inline-block;
+transition: 0.1s;
+text-decoration: none;
+margin: 1.10px;
+padding: 1.5px;
+text-transform: capitalize;
+color: rgb(50,50,50);
+letter-spacing: 0.5px;
+user-select: none;
+/*font-family: calibri;
+font-size: 16.5px;
+border-bottom: 1px solid black;*/
+}
+li a:hover {
+background-color: rgb(135, 135, 135);
+color: white;
+outline: 1px solid white;
+/*letter-spacing: 0.05px;*/
+}
+nav {
+background-color: rgb(220,220,220);
+width: 80px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 12.5px;
+margin-top: 20px;
+padding: 5px;
+border: 1px solid black;
+box-shadow: 2.5px 2.5px 7px gray;
+text-align: center;
+}
+
+#main_content {text-align: center; background-image: linear-gradient(lightgray,rgb(195.25,195.25,195.25)); width: 55%; /* width: 50%; */ margin: auto; padding: 5px; border-radius: 5px; box-shadow: 3px 3px 6px gray;}
+</style>
+</head>
+<body style="background-color: white;">
+
+<main id="main_content">
+
+<header>
+<h1 class="heading1">About Us</h1>
+</header>
+
+<section>
+<p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum</p>
+</section>
+
+
+<nav>
+<ul>
+<li><a href="home.page.html" class="link1">Home</a></li>
+<li><a href="#" class="about-link">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</main>
+
+<script type="text/javascript" defer="true">
+let AboutLink = document.querySelector(".about-link");
+AboutLink.onclick = () => alert("You are Already on the about page!");
+</script>
+
+</body>
+</html>
